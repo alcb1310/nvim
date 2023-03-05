@@ -34,9 +34,11 @@ map.set("v", "<leader>e", "<ESC>:NvimTreeToggle<CR>")
 
 -- Octo
 map.set("n", "<leader>pr", ":Octo pr list<CR>")
+map.set("n", "<leader>pc", ":Octo pr create<CR>")
 map.set("n", "<leader>il", ":Octo issue list<CR>")
 map.set("n", "<leader>ic", ":Octo issue create<CR>")
 map.set("v", "<leader>pr", ":Octo pr list<CR>")
+map.set("v", "<leader>pc", ":Octo pr create<CR>")
 map.set("v", "<leader>il", ":Octo issue list<CR>")
 map.set("v", "<leader>ic", ":Octo issue create<CR>")
 
