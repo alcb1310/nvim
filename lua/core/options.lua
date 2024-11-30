@@ -1,9 +1,12 @@
 vim.g.mapleader = " "
 local opt = vim.opt
 
- -- Display linenumbers
+-- Display linenumbers
 opt.relativenumber = true
 opt.number = true
+
+-- always show the sign column
+opt.signcolumn = "yes"
 
 -- Tab configuration
 opt.tabstop = 4
@@ -16,5 +19,8 @@ opt.smartindent = true
 opt.termguicolors = true
 
 -- Search highlighting
-opt.hlsearch=false
+opt.hlsearch = false
 opt.incsearch = true
+
+-- Hide the status line
+opt.laststatus = 0
