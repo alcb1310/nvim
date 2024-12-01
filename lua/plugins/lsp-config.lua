@@ -40,28 +40,31 @@ end
 return {
     "neovim/nvim-lspconfig",
     dependencies = {
-        "williamboman/mason-lspconfig.nvim",
-        dependencies = {
-            "williamboman/mason.nvim",
-            config = function()
-                require'mason'.setup()
-            end,
-        },
+        {
+            "williamboman/mason-lspconfig.nvim",
+            dependencies = {
+                "williamboman/mason.nvim",
+                config = function()
+                    require 'mason'.setup()
+                end,
+            },
 
-        config = function()
-            require("mason-lspconfig").setup {
-                ensure_installed = servers,
-            }
-        end
+            config = function()
+                require("mason-lspconfig").setup {
+                    ensure_installed = servers,
+                }
+            end
+        },
+        "saghen/blink.cmp",
     },
     config = function()
         local lspconfig = require('lspconfig')
 
         for _, lsp in ipairs(servers) do
             lspconfig[lsp].setup {
-                on_attach = on_attach
+                on_attach = on_attach,
+                capabilities = require('blink.cmp').get_lsp_capabilities()
             }
         end
-
     end
 }
