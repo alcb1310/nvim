@@ -40,7 +40,7 @@ end
 
 return {
     "neovim/nvim-lspconfig",
-    event = { "BufEnter" },
+    event = { "BufReadPost", "BufNewFile" },
     dependencies = {
         {
             "williamboman/mason-lspconfig.nvim",
