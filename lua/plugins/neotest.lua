@@ -6,9 +6,12 @@ return {
         "antoinemadec/FixCursorHold.nvim",
         "nvim-treesitter/nvim-treesitter",
         "nvim-neotest/neotest-go",
+        "marilari88/neotest-vitest",
     },
     ft = {
         "go",
+        "js",
+        "ts",
     },
     keys = {
         { "<leader>tr", "<cmd>lua require('neotest').run.run()<CR>",                     desc = "Run nearest test" },
@@ -32,6 +35,12 @@ return {
             -- your neotest config here
             adapters = {
                 require("neotest-go"),
+                require("neotest-vitest") {
+                    -- Filter directories when searching for test files. Useful in large projects (see Filter directories notes).
+                    filter_dir = function(name, rel_path, root)
+                        return name ~= "node_modules"
+                    end,
+                },
             },
         })
     end
