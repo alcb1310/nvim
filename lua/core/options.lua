@@ -24,3 +24,6 @@ opt.incsearch = true
 
 -- Hide the status line
 opt.laststatus = 0
+
+-- Disable mouse support
+opt.mouse = ''
