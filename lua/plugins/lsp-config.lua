@@ -35,10 +35,12 @@ local on_attach = function(client, bufnr)
     vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
     vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, opts)
     vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+    vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, opts)
 end
 
 return {
     "neovim/nvim-lspconfig",
+    event = { "BufEnter" },
     dependencies = {
         {
             "williamboman/mason-lspconfig.nvim",
