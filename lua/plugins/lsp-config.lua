@@ -61,11 +61,12 @@ return {
     },
     config = function()
         local lspconfig = require('lspconfig')
+        local capabilities = require('blink.cmp').get_lsp_capabilities()
 
         for _, lsp in ipairs(servers) do
             lspconfig[lsp].setup {
                 on_attach = on_attach,
-                capabilities = require('blink.cmp').get_lsp_capabilities()
+                capabilities = capabilities,
             }
         end
     end
