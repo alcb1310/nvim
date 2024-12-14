@@ -1,3 +1,3 @@
 vim.g.mapleader = ' '
 
-vim.keymap.set('n', '-', vim.cmd.Ex, { desc = 'Open file explorer' } )
+vim.keymap.set('n', '-', vim.cmd.Oil, { desc = 'Open file explorer' } )
