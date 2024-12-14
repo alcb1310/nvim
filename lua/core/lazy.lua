@@ -32,4 +32,7 @@ require("lazy").setup({
     install = { colorscheme = { "desert" } },
     -- automatically check for plugin updates
     checker = { enabled = true },
+    defaults = { lazy = true },
+    rocks = { enable = false },
+    change_detection = { enable = false },
 })
