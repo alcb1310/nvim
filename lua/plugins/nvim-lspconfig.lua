@@ -1,6 +1,10 @@
 local servers = {
-    'lua_ls',
     'gopls',
+    'html',
+    'lua_ls',
+    'sqlls',
+    'tailwindcss',
+    'ts_ls'
 }
 
 local on_attach = function(_, bufnr)
@@ -33,6 +37,7 @@ return {
     dependencies = {
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
+        'saghen/blink.cmp',
         {
             "folke/lazydev.nvim",
             ft = "lua", -- only load on lua files
@@ -47,20 +52,19 @@ return {
     },
     config = function()
         require("mason").setup()
-        ---@diagnostic disable-next-line: missing-fields
         require("mason-lspconfig").setup({
-            ensure_installed = servers
+            ensure_installed = servers,
+            automatic_installation = false,
         })
 
-        -- After setting up mason-lspconfig you may set up servers via lspconfig
-        -- require("lspconfig").lua_ls.setup {}
-        -- require("lspconfig").rust_analyzer.setup {}
-        -- ...
         local lspconfig = require('lspconfig')
 
         for _, server in ipairs(servers) do
+            local capabilities = require('blink.cmp').get_lsp_capabilities()
+
             lspconfig[server].setup {
-                on_attach = on_attach
+                on_attach = on_attach,
+                capabilities = capabilities
             }
         end
     end
