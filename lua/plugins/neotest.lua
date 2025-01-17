@@ -5,6 +5,7 @@ return {
         "nvim-lua/plenary.nvim",
         "antoinemadec/FixCursorHold.nvim",
         "nvim-neotest/neotest-go",
+        "nvim-neotest/neotest-jest",
     },
     cmd = { "Neotest" },
     keys = {
@@ -22,7 +23,7 @@ return {
             end,
         },
         { "<leader>ts", ":Neotest summary<cr>", { silent = true } },
-        { "<leader>to", ":Neotest output<cr>", { silent = true } },
+        { "<leader>to", ":Neotest output<cr>",  { silent = true } },
     },
     config = function()
         ---@diagnostic disable-next-line: missing-fields
@@ -30,6 +31,9 @@ return {
             adapters = {
                 require("neotest-go")({
                     recursive_run = true,
+                }),
+                require("neotest-jest")({
+                    jestCommand = "pnpm test --",
                 }),
             },
         })
