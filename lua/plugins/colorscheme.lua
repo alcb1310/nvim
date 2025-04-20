@@ -1,12 +1,15 @@
 return {
-  "srt0/codescope.nvim",
+  "folke/tokyonight.nvim",
   lazy = false,
   priority = 1000,
+  opts = {},
   config = function()
-    require("codescope").setup({
+    require'tokyonight'.setup{
+      style = "night",
       transparent = true,
-    })
+      terminal_colors = false,
+    }
 
-    vim.cmd.colorscheme("codescope")
+    vim.cmd[[colorscheme tokyonight]]
   end,
 }
