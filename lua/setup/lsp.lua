@@ -1,3 +1,6 @@
+-- Reference gotten from Maria Solano's dot files
+-- https://github.com/MariaSolOs/dotfiles/blob/main/.config/nvim/
+
 local diagnostic_icons = require('setup.icons').diagnostics
 local methods = vim.lsp.protocol.Methods
 
@@ -71,7 +74,7 @@ local function on_attach(client, bufnr)
 
   if client:supports_method(methods.textDocument_documentHighlight) then
     local under_cursor_highlights_group =
-    vim.api.nvim_create_augroup('mariasolos/cursor_highlights', { clear = false })
+        vim.api.nvim_create_augroup('alcb1310/cursor_highlights', { clear = false })
     vim.api.nvim_create_autocmd({ 'CursorHold', 'InsertLeave' }, {
       group = under_cursor_highlights_group,
       desc = 'Highlight references under the cursor',
@@ -87,7 +90,7 @@ local function on_attach(client, bufnr)
   end
 
   if client:supports_method(methods.textDocument_inlayHint) and vim.g.inlay_hints then
-    local inlay_hints_group = vim.api.nvim_create_augroup('mariasolos/toggle_inlay_hints', { clear = false })
+    local inlay_hints_group = vim.api.nvim_create_augroup('alcb1310/toggle_inlay_hints', { clear = false })
 
     -- Initial inlay hint display.
     -- Idk why but without the delay inlay hints aren't displayed at the very start.
@@ -244,10 +247,10 @@ vim.api.nvim_create_autocmd({ 'BufReadPre', 'BufNewFile' }, {
   once = true,
   callback = function()
     local server_configs = vim.iter(vim.api.nvim_get_runtime_file('lsp/*.lua', true))
-      :map(function(file)
-        return vim.fn.fnamemodify(file, ':t:r')
-      end)
-      :totable()
+        :map(function(file)
+          return vim.fn.fnamemodify(file, ':t:r')
+        end)
+        :totable()
     vim.lsp.enable(server_configs)
   end,
 })
