@@ -9,7 +9,7 @@ return {
   -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
   lazy = true,
   cmd = 'Oil',
-  keys = {
-    {'-', '<cmd>Oil<cr>', desc='Open Oil'}
-  }
+  -- keys = {
+  --   {'-', '<cmd>Oil<cr>', desc='Open Oil'}
+  -- }
 }
