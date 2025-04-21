@@ -20,3 +20,8 @@ opt.expandtab = true
 opt.autoindent = true
 
 opt.wrap = false
+
+opt.incsearch = true
+opt.hlsearch = false
+
+opt.scrolloff = 8
