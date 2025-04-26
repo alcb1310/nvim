@@ -1,6 +1,9 @@
 return {
   'saghen/blink.cmp',
-  dependencies = { 'rafamadriz/friendly-snippets' },
+  dependencies = {
+    'Kaiser-Yang/blink-cmp-avante',
+    'rafamadriz/friendly-snippets'
+  },
   version = '1.*',
   ---@module 'blink.cmp'
   ---@type blink.cmp.Config
@@ -22,14 +25,23 @@ return {
       }
     },
     sources = {
-      default = { 'lsp', 'path', 'snippets', 'buffer' },
+      default = { 'avante', 'lsp', 'path', 'snippets', 'buffer' },
+      providers = {
+        avante = {
+          module = 'blink-cmp-avante',
+          name = 'Avante',
+          opts = {
+            -- options for blink-cmp-avante
+          }
+        }
+      },
     },
     fuzzy = { implementation = "prefer_rust_with_warning" }
   },
   opts_extend = { "sources.default" },
-  config = function (_, opts)
+  config = function(_, opts)
     require('blink.cmp').setup(opts)
 
-    vim.lsp.config('*', {capabilities = require('blink.cmp').get_lsp_capabilities(nil, true)})
+    vim.lsp.config('*', { capabilities = require('blink.cmp').get_lsp_capabilities(nil, true) })
   end
 }
