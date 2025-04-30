@@ -151,25 +151,9 @@ end
 -- Diagnostic configuration.
 vim.diagnostic.config {
   virtual_text = {
-    prefix = '',
+    prefix = '●',
+    severity = { min = vim.diagnostic.severity.ERROR },
     spacing = 2,
-    format = function(diagnostic)
-      -- Use shorter, nicer names for some sources:
-      local special_sources = {
-        ['Lua Diagnostics.'] = 'lua',
-        ['Lua Syntax Check.'] = 'lua',
-      }
-
-      local message = diagnostic_icons[vim.diagnostic.severity[diagnostic.severity]]
-      if diagnostic.source then
-        message = string.format('%s %s', message, special_sources[diagnostic.source] or diagnostic.source)
-      end
-      if diagnostic.code then
-        message = string.format('%s[%s]', message, diagnostic.code)
-      end
-
-      return message .. ' '
-    end,
   },
   float = {
     source = 'if_many',
