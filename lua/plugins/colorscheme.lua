@@ -11,7 +11,7 @@ return {
         terminal_colors = false,
       }
 
-      -- vim.cmd [[colorscheme tokyonight]]
+      vim.cmd [[colorscheme tokyonight]]
     end,
   },
   {
@@ -23,8 +23,8 @@ return {
       require 'kanagawa'.setup {
         transparent = true,
       }
-
-      vim.cmd [[colorscheme kanagawa]]
+      --
+      -- vim.cmd [[colorscheme kanagawa]]
     end,
   }
 }
