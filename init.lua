@@ -62,3 +62,11 @@ vim.diagnostic.config({
         current_line = true
     }
 })
+
+vim.api.nvim_create_autocmd('BufWritePre', {
+    desc = 'Format files on save',
+    group = vim.api.nvim_create_augroup('alcb1310/save', { clear = true }),
+    callback = function()
+        vim.lsp.buf.format()
+    end
+})
