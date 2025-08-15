@@ -29,3 +29,12 @@ vim.api.nvim_create_autocmd('BufReadPost', {
         end
     end
 })
+
+---@diagnostic disable-next-line: param-type-mismatch
+vim.api.nvim_create_autocmd('TextYankPost', {
+    desc = 'Highlight on yank',
+    group = vim.api.nvim_create_augroup('alcb1310/yank', { clear = true }),
+    callback = function()
+        vim.highlight.on_yank()
+    end
+})
