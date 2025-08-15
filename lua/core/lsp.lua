@@ -17,6 +17,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
         vim.lsp.completion.enable(true, client.id, 0, { autotrigger = true })
 
+        vim.keymap.set('n', '<leader>ff', vim.lsp.buf.format)
         vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = 'Go to Definition' })
         vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = 'Code Actions' })
     end
