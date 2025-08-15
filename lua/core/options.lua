@@ -21,3 +21,5 @@ vim.o.signcolumn = 'yes'
 -- Completion options
 vim.o.completeopt = 'fuzzy,menuone,noselect,popup'
 vim.o.winborder = 'rounded'
+
+vim.opt.path:append('**')
