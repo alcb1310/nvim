@@ -16,13 +16,6 @@ end
 
 load_modules('core')
 
--- Here we will be defining some global keymaps
-
-vim.keymap.set('n', '-', vim.cmd.Ex, { desc = 'Open netrw file browser' })
-vim.keymap.set('n', '<leader>so', '<cmd>update<cr><cmd>source<cr>',
-    { desc = 'saves and sources the current file', silent = true })
-vim.keymap.set('i', '<M-i>', '<C-x><C-o>', { desc = 'Displays completion menu' })
-
 -- Here we will be setting up our LSP servers
 local lsp_configs = vim.iter(vim.api.nvim_get_runtime_file('lsp/*.lua', true))
     :map(function(file)
