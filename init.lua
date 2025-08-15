@@ -5,6 +5,17 @@
 vim.g.mapleader = " "
 vim.g.localmapleader = " "
 
+---@param directory string
+local function load_modules(directory)
+    vim.iter(vim.api.nvim_get_runtime_file('lua/' .. directory .. '/*.lua', true))
+        :map(function(file)
+            local name = vim.fn.fnamemodify(file, ':t:r')
+            require(directory .. '.' .. name)
+        end)
+end
+
+load_modules('core')
+
 -- Here we will be defining some Neovim configuration options
 
 -- Line numbering
