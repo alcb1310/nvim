@@ -15,7 +15,12 @@ vim.api.nvim_create_autocmd('LspAttach', {
             return
         end
 
-        vim.lsp.completion.enable(true, client.id, 0, { autotrigger = true })
+        vim.lsp.completion.enable(true, client.id, 0, {
+            autotrigger = true,
+            convert = function(item)
+                return { abbr = item.label:gsub('%b()', '') }
+            end
+        })
 
         vim.keymap.set('n', 'gd', '<cmd>FzfLua lsp_definitions<cr>', { desc = '[G]o to [D]efinition', silent = true })
         vim.keymap.set('n', 'gi', '<cmd>FzfLua lsp_implementations<cr>',

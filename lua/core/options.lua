@@ -18,6 +18,8 @@ vim.o.expandtab = true   -- replace tab characters with the propper amount of sp
 -- Search configuration
 vim.o.incsearch = true -- Highlight the text being searched
 vim.o.hlsearch = false -- Remove highlight when search has finished
+vim.o.smartcase = true
+vim.o.ignorecase = true
 
 -- Completion options
 vim.o.completeopt = 'fuzzy,menuone,noselect,popup'
