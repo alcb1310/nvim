@@ -15,3 +15,4 @@ local function load_modules(directory)
 end
 
 load_modules('core')
+load_modules('plugins')
