@@ -34,3 +34,6 @@ vim.o.colorcolumn = '100'
 -- Behavior settings
 vim.opt.path:append('**') -- Include subdirectories when using the find command
 vim.o.signcolumn = 'yes'
+
+-- Formatting settings
+vim.o.formatexpr = ''

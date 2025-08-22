@@ -6,6 +6,14 @@ local lsp_configs = vim.iter(vim.api.nvim_get_runtime_file('lsp/*.lua', true))
     :totable()
 vim.lsp.enable(lsp_configs)
 
+-- vim.lsp.config('gopls', {
+--     settings = {
+--         gopls = {
+--             gofumpt = true,
+--         }
+--     }
+-- })
+
 vim.api.nvim_create_autocmd('LspAttach', {
     desc = 'LSP specific configuration and keymaps',
     group = vim.api.nvim_create_augroup('alcb1310/lsp', { clear = true }),
@@ -22,7 +30,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
             end
         })
 
-        vim.keymap.set('n', 'gd', '<cmd>FzfLua lsp_definitions<cr>', { desc = '[G]o to [D]efinition', silent = true })
+        vim.keymap.set('n', 'gd', '<cmd>FzfLua lsp_definitions<cr>',
+            { desc = '[G]o to [D]efinition', silent = true })
         vim.keymap.set('n', 'gi', '<cmd>FzfLua lsp_implementations<cr>',
             { desc = '[G]o to [I]mplementations', silent = true })
 
