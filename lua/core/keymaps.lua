@@ -17,3 +17,15 @@ vim.keymap.set('n', '<C-h>', '<C-w>h')
 vim.keymap.set('n', '<C-j>', '<C-w>j')
 vim.keymap.set('n', '<C-k>', '<C-w>k')
 vim.keymap.set('n', '<C-l>', '<C-w>l')
+
+vim.keymap.set('n', '<leader>m', '<cmd>make<cr>', { desc = '[M]ake', silent = true })
+vim.keymap.set('n', '<leader>mr', '<cmd>make run<cr>', { desc = '[M]ake [R]un', silent = true })
+
+vim.keymap.set('n', 'co', '<cmd>copen<cr>', { desc = 'Qui[C]kfix list [O]pen', silent = true })
+vim.keymap.set('n', 'cn', '<cmd>cnext<cr>', { desc = 'Qui[C]kfix list [N]ext', silent = true })
+vim.keymap.set('n', 'cp', '<cmd>cprev<cr>', { desc = 'Qui[C]kfix list [P]rev', silent = true })
+
+vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]], { desc = 'Yank to the system\'s clipboard', silent = true })
+vim.keymap.set('n', '<leader>Y', [["+Y]], { desc = 'Yank to the system\'s clipboard', silent = true })
+
+vim.keymap.set('n', 'x', '"_x', { desc = 'Use unknown register when deleting characters', silent = true })
