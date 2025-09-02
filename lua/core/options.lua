@@ -23,6 +23,8 @@ vim.o.cursorcolumn = true
 vim.o.colorcolumn = '100'
 
 -- 6 multiple windows
+vim.o.splitbelow = true
+vim.o.splitright = true
 
 -- 7 multiple tab pages
 vim.o.showtabline = 0
