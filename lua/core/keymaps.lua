@@ -29,3 +29,5 @@ vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]], { desc = 'Yank to the system\
 vim.keymap.set('n', '<leader>Y', [["+Y]], { desc = 'Yank to the system\'s clipboard', silent = true })
 
 vim.keymap.set('n', 'x', '"_x', { desc = 'Use unknown register when deleting characters', silent = true })
+
+vim.keymap.set('n', '<leader>pu', vim.pack.update, { desc = 'update packages', silent = true })
