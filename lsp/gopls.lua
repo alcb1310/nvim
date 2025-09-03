@@ -87,6 +87,10 @@ end
 
 return {
     cmd = { 'gopls' },
+    settings = {
+        gofumpt = true,
+        buildFlags = { '-tags=goimportsreviser' },
+    },
     filetypes = { 'go', 'gomod', 'gowork', 'gotmpl' },
     root_dir = function(bufnr, on_dir)
         local fname = vim.api.nvim_buf_get_name(bufnr)
