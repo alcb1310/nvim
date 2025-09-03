@@ -4,6 +4,7 @@ vim.pack.add({
     { src = "https://github.com/nvim-lua/plenary.nvim" },
     { src = "https://github.com/nvim-neotest/neotest" },
     { src = "https://github.com/nvim-neotest/nvim-nio" },
+    { src = 'https://github.com/ThePrimeagen/harpoon' },
     { src = 'https://github.com/folke/flash.nvim' },
     { src = 'https://github.com/folke/todo-comments.nvim' },
     { src = 'https://github.com/ibhagwan/fzf-lua' },
@@ -18,14 +19,6 @@ vim.pack.add({
     { src = 'https://github.com/rcarriga/nvim-dap-ui' },
     { src = 'https://github.com/rebelot/kanagawa.nvim' },
     { src = 'https://github.com/theHamsta/nvim-dap-virtual-text' },
-})
-
-vim.api.nvim_create_autocmd('PackChanged', {
-    desc = 'Update treesitter configs on pack update',
-    group = vim.api.nvim_create_augroup('alcb1310/ts-pack', { clear = true }),
-    callback = function()
-        vim.cmd [[TSUpdate]]
-    end
 })
 
 -- Default options:
