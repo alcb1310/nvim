@@ -4,6 +4,7 @@ vim.pack.add({
     { src = "https://github.com/nvim-lua/plenary.nvim" },
     { src = "https://github.com/nvim-neotest/neotest" },
     { src = "https://github.com/nvim-neotest/nvim-nio" },
+    { src = 'https://github.com/folke/flash.nvim' },
     { src = 'https://github.com/folke/todo-comments.nvim' },
     { src = 'https://github.com/ibhagwan/fzf-lua' },
     { src = 'https://github.com/julianolf/nvim-dap-lldb' },
