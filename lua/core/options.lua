@@ -43,6 +43,8 @@ vim.o.formatexpr = ''
 vim.o.completeopt = 'fuzzy,menuone,noselect,popup'
 vim.o.pumheight = 15
 vim.o.pumblend = 7
+vim.o.undodir = os.getenv('HOME') .. '/.local/state/nvim/undodir'
+vim.o.undofile = true
 
 -- 13 tabs and indenting
 vim.o.tabstop = 4        -- number of spaces a `tab` stands for
@@ -58,6 +60,7 @@ vim.o.smartindent = true -- do smart autoindenting when startin a new line
 -- 16 mapping
 
 -- 17 reading and writing files
+vim.o.backup = false
 
 -- 18 the swap file
 vim.o.swapfile = false

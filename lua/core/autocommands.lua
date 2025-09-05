@@ -38,12 +38,3 @@ vim.api.nvim_create_autocmd('TextYankPost', {
         vim.hl.on_yank()
     end
 })
-
-
-vim.api.nvim_create_autocmd('PackChanged', {
-    desc = 'Update treesitter configs on pack update',
-    group = vim.api.nvim_create_augroup('alcb1310/ts-pack', { clear = true }),
-    callback = function()
-        vim.cmd [[TSUpdate]]
-    end
-})

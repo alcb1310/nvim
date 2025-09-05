@@ -11,6 +11,7 @@ vim.pack.add({
     { src = 'https://github.com/julianolf/nvim-dap-lldb' },
     { src = 'https://github.com/leoluz/nvim-dap-go' },
     { src = 'https://github.com/lewis6991/gitsigns.nvim' },
+    { src = 'https://github.com/mbbill/undotree' },
     { src = 'https://github.com/mfussenegger/nvim-dap' },
     { src = 'https://github.com/nvim-lua/plenary.nvim' },
     { src = 'https://github.com/nvim-neotest/nvim-nio' },
@@ -19,6 +20,14 @@ vim.pack.add({
     { src = 'https://github.com/rcarriga/nvim-dap-ui' },
     { src = 'https://github.com/rebelot/kanagawa.nvim' },
     { src = 'https://github.com/theHamsta/nvim-dap-virtual-text' },
+})
+
+vim.api.nvim_create_autocmd('PackChanged', {
+    desc = 'Update treesitter configs on pack update',
+    group = vim.api.nvim_create_augroup('alcb1310/ts-pack', { clear = true }),
+    callback = function()
+        vim.cmd [[TSUpdate]]
+    end
 })
 
 -- Default options:
@@ -43,6 +52,5 @@ require 'kanagawa'.setup({
         light = "lotus"
     },
 })
-
 -- setup must be called before loading
 vim.cmd("colorscheme kanagawa")
