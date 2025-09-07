@@ -1,6 +1,6 @@
 -- Here we will be defining some global keymaps
 
-vim.keymap.set('n', '-', vim.cmd.Ex, { desc = 'Open netrw file browser' })
+vim.keymap.set('n', '-', '<cmd>Oil --float --preview<cr>', { desc = 'Open file browser' })
 vim.keymap.set('n', '<leader>so', '<cmd>update<cr><cmd>source<cr>',
     { desc = 'saves and sources the current file', silent = true })
 vim.keymap.set('i', '<M-i>', '<C-x><C-o>', { desc = 'Displays completion menu' })

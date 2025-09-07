@@ -16,10 +16,12 @@ vim.pack.add({
     { src = 'https://github.com/mfussenegger/nvim-dap' },
     { src = 'https://github.com/nvim-lua/plenary.nvim' },
     { src = 'https://github.com/nvim-neotest/nvim-nio' },
+    { src = 'https://github.com/nvim-tree/nvim-web-devicons' },
     { src = 'https://github.com/nvim-treesitter/nvim-treesitter' },
     { src = 'https://github.com/nvim-treesitter/nvim-treesitter-context' },
     { src = 'https://github.com/rcarriga/nvim-dap-ui' },
     { src = 'https://github.com/rebelot/kanagawa.nvim' },
+    { src = 'https://github.com/stevearc/oil.nvim' },
     { src = 'https://github.com/theHamsta/nvim-dap-virtual-text' },
     { src = 'https://github.com/tpope/vim-fugitive' },
 })
