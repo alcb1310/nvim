@@ -6,7 +6,8 @@ vim.keymap.set('n', '<leader>so', '<cmd>update<cr><cmd>source<cr>',
 vim.keymap.set('i', '<M-i>', '<C-x><C-o>', { desc = 'Displays completion menu' })
 vim.keymap.set('n', '<leader>rs', '<cmd>update<cr><cmd>restart<cr>', { desc = 'saves and restart neovim', silent = true })
 
-vim.keymap.set('n', '<leader>f', ':find ')
+vim.keymap.set('n', '<leader>f', ':find  **/*')
+vim.keymap.set('n', '<leader>b', ':b ')
 
 vim.keymap.set('n', 'n', 'nzz', { desc = 'Find next result and center' })
 vim.keymap.set('n', 'N', 'Nzz', { desc = 'Find prev result and center' })
