@@ -1,7 +1,8 @@
+require('mini.icons').setup()
 require 'oil'.setup({
     defaulg_file_explorer = true,
     columns = {
-        "icons",
+        "icon",
     },
     skip_confirm_for_simple_edits = false,
     view_options = {
