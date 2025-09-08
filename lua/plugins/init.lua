@@ -6,6 +6,7 @@ vim.pack.add({
     { src = "https://github.com/nvim-neotest/nvim-nio" },
     { src = 'https://github.com/Exafunction/windsurf.vim' },
     { src = 'https://github.com/ThePrimeagen/harpoon',                   version = 'harpoon2' },
+    { src = 'https://github.com/benomahony/oil-git.nvim' },
     { src = 'https://github.com/folke/flash.nvim' },
     { src = 'https://github.com/folke/todo-comments.nvim' },
     { src = 'https://github.com/ibhagwan/fzf-lua' },
