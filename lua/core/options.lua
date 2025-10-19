@@ -82,3 +82,6 @@ vim.o.grepprg = "rg --vimgrep -uu"
 -- 24 various
 vim.o.signcolumn = 'yes'
 vim.o.winborder = 'rounded'
+
+-- 25 netrw
+vim.g.netrw_banner = 0
