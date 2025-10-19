@@ -6,6 +6,7 @@ vim.pack.add({
 
     --colorscheme
     { src = 'https://github.com/rebelot/kanagawa.nvim' },
+    { src = 'https://github.com/Mofiqul/dracula.nvim' },
 
     -- treesitter
     { src = 'https://github.com/nvim-treesitter/nvim-treesitter' },
