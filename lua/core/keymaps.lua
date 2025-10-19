@@ -32,3 +32,7 @@ vim.keymap.set('n', '<leader>Y', [["+Y]], { desc = 'Yank to the system\'s clipbo
 vim.keymap.set('n', 'x', '"_x', { desc = 'Use unknown register when deleting characters', silent = true })
 
 vim.keymap.set('n', '<leader>pu', vim.pack.update, { desc = 'update packages', silent = true })
+
+vim.keymap.set('n', "<leader>pt", function()
+    require("present").start_presentation {}
+end, { desc = 'presentation', silent = true })

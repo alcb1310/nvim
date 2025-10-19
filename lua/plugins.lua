@@ -43,8 +43,9 @@ vim.pack.add({
     -- comments
     { src = 'https://github.com/folke/todo-comments.nvim' },
 
-    -- undo
+    -- miscellaneous
     { src = 'https://github.com/mbbill/undotree' },
+    { src = 'https://github.com/alcb1310/present.nvim' },
 })
 
 vim.api.nvim_create_autocmd('PackChanged', {

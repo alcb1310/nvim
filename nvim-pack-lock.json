@@ -4,6 +4,10 @@
       "rev": "1900f89",
       "src": "https://github.com/antoinemadec/FixCursorHold.nvim"
     },
+    "dracula.nvim": {
+      "rev": "041d923",
+      "src": "https://github.com/Mofiqul/dracula.nvim"
+    },
     "flash.nvim": {
       "rev": "2febce6",
       "src": "https://github.com/folke/flash.nvim"
@@ -84,6 +88,10 @@
     "plenary.nvim": {
       "rev": "b9fd522",
       "src": "https://github.com/nvim-lua/plenary.nvim"
+    },
+    "present.nvim": {
+      "rev": "ce0bb0b",
+      "src": "https://github.com/alcb1310/present.nvim"
     },
     "todo-comments.nvim": {
       "rev": "19d461d",
