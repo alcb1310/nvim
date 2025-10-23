@@ -28,13 +28,13 @@ dracula.setup({
         black = "#191A21",
     },
     -- show the '~' characters after the end of buffers
-    show_end_of_buffer = true,  -- default false
+    show_end_of_buffer = true,    -- default false
     -- use transparent background
-    transparent_bg = true,      -- default false
+    transparent_bg = true,        -- default false
     -- set custom lualine background color
     lualine_bg_color = "#44475a", -- default nil
     -- set italic comment
-    italic_comment = true,      -- default false
+    italic_comment = true,        -- default false
     -- overrides the default highlights with table see `:h synIDattr`
     overrides = {},
     -- You can use overrides as table like this
@@ -50,3 +50,5 @@ dracula.setup({
     --   }
     -- end,
 })
+
+vim.cmd("colorscheme dracula")
