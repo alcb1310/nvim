@@ -21,8 +21,6 @@ vim.pack.add({
     { src = 'https://github.com/prichrd/netrw.nvim' },
     { src = 'https://github.com/folke/flash.nvim' },
     { src = 'https://github.com/ibhagwan/fzf-lua' },
-    -- { src = 'https://github.com/benomahony/oil-git.nvim' },
-    -- { src = 'https://github.com/stevearc/oil.nvim' },
 
     -- testing
     { src = "https://github.com/fredrikaverpil/neotest-golang" },
@@ -46,6 +44,10 @@ vim.pack.add({
     -- miscellaneous
     { src = 'https://github.com/mbbill/undotree' },
     { src = 'https://github.com/alcb1310/present.nvim' },
+
+    -- completions
+    { src = 'https://github.com/saghen/blink.cmp',                       version = 'v1.7.0' },
+    { src = 'https://github.com/rafamadriz/friendly-snippets' },
 })
 
 vim.api.nvim_create_autocmd('PackChanged', {
