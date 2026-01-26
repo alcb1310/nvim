@@ -2,7 +2,9 @@ local test = require 'neotest'
 
 test.setup({
     adapters = {
-        require("neotest-golang"),
+        require("neotest-golang")({
+            recursive_run = true,
+        }),
         -- require("neotest-jest")({
         --     jestCommand = "pnpm test --",
         -- }),
