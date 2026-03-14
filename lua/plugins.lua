@@ -9,15 +9,15 @@ vim.pack.add({
     { src = 'https://github.com/Mofiqul/dracula.nvim' },
 
     -- treesitter
-    { src = 'https://github.com/nvim-treesitter/nvim-treesitter',        version = 'master' },
-    { src = 'https://github.com/nvim-treesitter/nvim-treesitter-context' },
+    { src = 'https://github.com/nvim-treesitter/nvim-treesitter', version = 'main' },
+    -- { src = 'https://github.com/nvim-treesitter/nvim-treesitter-context' },
 
     -- git
     { src = 'https://github.com/lewis6991/gitsigns.nvim' },
     { src = 'https://github.com/tpope/vim-fugitive' },
 
     -- navigation
-    { src = 'https://github.com/ThePrimeagen/harpoon',                   version = 'harpoon2' },
+    { src = 'https://github.com/ThePrimeagen/harpoon',            version = 'harpoon2' },
     { src = 'https://github.com/prichrd/netrw.nvim' },
     { src = 'https://github.com/folke/flash.nvim' },
     { src = 'https://github.com/ibhagwan/fzf-lua' },
@@ -46,14 +46,21 @@ vim.pack.add({
     { src = 'https://github.com/alcb1310/present.nvim' },
 
     -- completions
-    { src = 'https://github.com/saghen/blink.cmp',                       version = 'v1.7.0' },
+    { src = 'https://github.com/saghen/blink.cmp',                version = 'v1.7.0' },
     { src = 'https://github.com/rafamadriz/friendly-snippets' },
 })
 
 vim.api.nvim_create_autocmd('PackChanged', {
     desc = 'Update treesitter configs on pack update',
     group = vim.api.nvim_create_augroup('alcb1310/ts-pack', { clear = true }),
-    callback = function()
-        vim.cmd [[TSUpdate]]
+    callback = function(ev)
+        local name, kind = ev.data.spec.name, ev.data.kind
+
+        if name == 'nvim-treesitter' and kind == 'update' then
+            if not ev.data.active then vim.cmd.packadd('nvim-treesitter') end
+            vim.cmd [[TSUpdate]]
+        end
+    end
+})
     end
 })
