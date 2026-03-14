@@ -1,10 +1,12 @@
 -- Here we will be defining some global keymaps
 
-vim.keymap.set('n', '-', vim.cmd.Ex, { desc = 'Open file browser' })
+vim.keymap.set('n', '<leader>pe', vim.cmd.Ex, { desc = 'Open file browser' })
 vim.keymap.set('n', '<leader>so', '<cmd>update<cr><cmd>source<cr>',
     { desc = 'saves and sources the current file', silent = true })
 vim.keymap.set('i', '<M-i>', '<C-x><C-o>', { desc = 'Displays completion menu' })
 vim.keymap.set('n', '<leader>rs', '<cmd>update<cr><cmd>restart<cr>', { desc = 'saves and restart neovim', silent = true })
+vim.keymap.set({ 'i', 'v' }, 'jk', '<Esc>', { desc = 'Escape', silent = true })
+vim.keymap.set({ 'i', 'v' }, 'kj', '<Esc>', { desc = 'Escape', silent = true })
 
 vim.keymap.set('n', '<leader>f', ':find  **/*')
 vim.keymap.set('n', '<leader>b', ':b ')
