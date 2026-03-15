@@ -20,6 +20,10 @@
       "rev": "2f5d4c3f3c675962242096bcc8e586d76dd72eb2",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
+    "todo-comments.nvim": {
+      "rev": "31e3c38ce9b29781e4422fc0322eb0a21f4e8668",
+      "src": "https://github.com/folke/todo-comments.nvim"
+    },
     "windsurf.vim": {
       "rev": "3c0a4f8a7be75113a6e19be13b7cc37210d6e26a",
       "src": "https://github.com/Exafunction/windsurf.vim"
