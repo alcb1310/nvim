@@ -37,6 +37,10 @@
       "rev": "2f5d4c3f3c675962242096bcc8e586d76dd72eb2",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
+    "present.nvim": {
+      "rev": "ce0bb0bda301be94b8f524554d502d626c6a7fb5",
+      "src": "https://github.com/alcb1310/present.nvim"
+    },
     "todo-comments.nvim": {
       "rev": "31e3c38ce9b29781e4422fc0322eb0a21f4e8668",
       "src": "https://github.com/folke/todo-comments.nvim"
