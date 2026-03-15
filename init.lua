@@ -15,4 +15,3 @@ local function load_modules(directory)
 end
 
 load_modules('core')
-require('plugins')

@@ -1,3 +1,8 @@
+vim.pack.add({
+    { src = 'https://github.com/prichrd/netrw.nvim' },
+    { src = 'https://github.com/nvim-mini/mini.icons' },
+})
+
 require('mini.icons').setup()
 require("netrw").setup({
     -- File icons to use when `use_devicons` is false or if

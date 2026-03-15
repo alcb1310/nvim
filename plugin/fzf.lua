@@ -1,3 +1,8 @@
+vim.pack.add({
+    { src = 'https://github.com/ibhagwan/fzf-lua' },
+    { src = 'https://github.com/nvim-mini/mini.icons' },
+})
+
 require 'fzf-lua'.setup()
 
 vim.keymap.set('n', '<leader>sf', '<cmd>FzfLua files<cr>', { desc = '[S]earch [F]iles', silent = true })
