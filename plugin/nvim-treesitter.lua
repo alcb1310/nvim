@@ -26,6 +26,7 @@ vim.api.nvim_create_autocmd('FileType', {
         'markdown',
         'markdown_inline',
         'query',
+        'sql',
         'typescript',
         'typescriptreact',
         'vim',
