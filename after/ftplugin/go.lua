@@ -1,4 +1,7 @@
+vim.cmd("runtime! ftplugin/dap.lua")
+
 vim.pack.add({
+    -- Test plugins
     { src = "https://github.com/fredrikaverpil/neotest-golang" },
     { src = "https://github.com/nvim-neotest/neotest" },
     { src = "https://github.com/nvim-neotest/nvim-nio" },
