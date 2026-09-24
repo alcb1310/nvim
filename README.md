@@ -53,9 +53,36 @@ The location is important since is where *NeoVim* will look for the configuratio
 
 ## LSP server Installation
 
+![Lua](https://img.shields.io/badge/lua-%232C2D72.svg?style=for-the-badge&logo=lua&logoColor=white)
+![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white)
+
 This configuration requires the following **LSP** servers running 
 
 - **Lua LSP**
 ```bash
 sudo pacman -S lua-language-server
+```
+
+-- **Gopls**
+```bash
+go install golang.org/x/tools/gopls@latest
+```
+
+## Formatters
+
+- **Gofumpt**
+```bash
+go install mvdan.cc/gofumpt@latest
+```
+
+- **Goimports-reviser**
+```bash
+go install -v github.com/incu6us/goimports-reviser/v3@latest
+```
+
+## Debuggers
+
+- **Go Delve**
+```bash
+go install github.com/go-delve/delve/cmd/dlv@latest
 ```
