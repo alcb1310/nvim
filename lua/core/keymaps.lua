@@ -11,3 +11,5 @@ vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'Switch to right window' } )
 
 vim.keymap.set('n', 'n', 'nzz', { desc = 'Find next result and center' } )
 vim.keymap.set('n', 'N', 'Nzz', { desc = 'Find previous result and center' } )
+vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Scroll down and center' } )
+vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Scroll up and center' } )
