@@ -3,3 +3,8 @@ vim.keymap.set('n', '<leader>rs', function()
     vim.cmd.update()
     vim.cmd.restart()
 end, { desc = 'Saves and Restart neovim', silent = true })
+
+vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = 'Switch to left window' } )
+vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'Switch to down window' } )
+vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Switch to up window' } )
+vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'Switch to right window' } )
