@@ -82,6 +82,13 @@ npm install @typescript/native-preview
 
 ## Formatters
 
+![Biome](https://img.shields.io/badge/biome-%2360A5FA.svg?style=for-the-badge&logo=biome&logoColor=white)
+
+- **Biome**
+```bash
+sudo npm install -g @biomejs/biome
+```
+
 - **Gofumpt**
 ```bash
 go install mvdan.cc/gofumpt@latest
