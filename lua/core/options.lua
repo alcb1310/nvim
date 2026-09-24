@@ -1,6 +1,10 @@
 -- -- 1. important
 
 -- 2. moving around
+vim.opt.path:append('**')     -- Include subdirectories when using the find command
+vim.o.incsearch = true        -- Highlight the text being searched
+vim.o.ignorecase = true       -- Ignore case in search partterns
+vim.o.smartcase = true        -- Override the `ignorecase` option if the search pattern includes upper case
 
 -- 3. tags
 
