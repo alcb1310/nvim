@@ -17,3 +17,7 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Scroll up and center' } )
 -- Yank to the system's clipboard
 vim.keymap.set({'n', 'v'}, '<leader>y', [["+y]], { silent = true } )
 vim.keymap.set('n', '<leader>Y', [["+Y]], { silent = true } )
+
+-- Move highlighted line up or down
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { silent = true } )
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { silent = true } )
