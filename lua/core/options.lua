@@ -15,3 +15,7 @@ vim.o.hlsearch = false        -- Remove highlight when search has finished
 vim.o.termguicolors = true    -- Enhanced colors
 vim.o.cursorline = true       -- Highlight current line for easier visualization
 vim.o.colorcolumn = '100'     -- Highlight the specified column as a reference
+
+-- 6. multiple windows
+vim.o.splitbelow = true       -- When split add pane below the one is being edited
+vim.o.splitright = true       -- When vertical split add pane to the right of the one being edited
