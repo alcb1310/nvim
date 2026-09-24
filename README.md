@@ -6,7 +6,6 @@ This is my current neovim configuration using the `vim.pack` package manager
 
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 ![Neovim](https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white)
-![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white)
 
 ## Neovim Installation
 
@@ -57,6 +56,7 @@ The location is important since is where *NeoVim* will look for the configuratio
 ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 ![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white)
 ![Lua](https://img.shields.io/badge/lua-%232C2D72.svg?style=for-the-badge&logo=lua&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
 This configuration requires the following **LSP** servers running 
@@ -69,6 +69,10 @@ sudo pacman -S lua-language-server
 - **Gopls**
 ```bash
 go install golang.org/x/tools/gopls@latest
+```
+- **Tailwind CSS**
+```bash
+npm install -g @tailwindcss/language-server
 ```
 
 - **TypeScript**
