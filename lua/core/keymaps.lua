@@ -8,3 +8,6 @@ vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = 'Switch to left window' } )
 vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'Switch to down window' } )
 vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Switch to up window' } )
 vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'Switch to right window' } )
+
+vim.keymap.set('n', 'n', 'nzz', { desc = 'Find next result and center' } )
+vim.keymap.set('n', 'N', 'Nzz', { desc = 'Find previous result and center' } )
