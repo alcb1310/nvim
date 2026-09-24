@@ -23,3 +23,10 @@ vim.o.splitright = true       -- When vertical split add pane to the right of th
 -- 12 editing text
 vim.o.undodir = os.getenv('HOME') .. '/.local/state/nvim/undodir' -- Location for the undo files
 vim.o.undofile = true         -- When on, Vim autmatically saves undo history
+
+-- 13. tabs and indenting
+vim.o.tabstop = 4             -- Number of spaces a `tab` stands for
+vim.o.shiftwidth = 4          -- Number of spaces for (auto)indent
+vim.o.expandtab = true        -- Replace `tab` characters with the propper amount of spaces
+vim.o.autoindent = true       -- Copy indent from current line when starting a new one
+vim.o.smartindent = true      -- Do smart autoindenting when starting a new line
