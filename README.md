@@ -55,6 +55,7 @@ The location is important since is where *NeoVim* will look for the configuratio
 
 ![Lua](https://img.shields.io/badge/lua-%232C2D72.svg?style=for-the-badge&logo=lua&logoColor=white)
 ![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
 This configuration requires the following **LSP** servers running 
 
@@ -63,9 +64,14 @@ This configuration requires the following **LSP** servers running
 sudo pacman -S lua-language-server
 ```
 
--- **Gopls**
+- **Gopls**
 ```bash
 go install golang.org/x/tools/gopls@latest
+```
+
+- **TypeScript**
+```bash
+npm install @typescript/native-preview
 ```
 
 ## Formatters
