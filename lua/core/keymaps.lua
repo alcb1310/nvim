@@ -1,1 +1,5 @@
 vim.keymap.set('n', '<leader>pe', vim.cmd.Ex, { desc = 'Open Netrw' } )
+vim.keymap.set('n', '<leader>rs', function()
+    vim.cmd.update()
+    vim.cmd.restart()
+end, { desc = 'Saves and Restart neovim', silent = true })
