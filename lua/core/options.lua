@@ -19,3 +19,7 @@ vim.o.colorcolumn = '100'     -- Highlight the specified column as a reference
 -- 6. multiple windows
 vim.o.splitbelow = true       -- When split add pane below the one is being edited
 vim.o.splitright = true       -- When vertical split add pane to the right of the one being edited
+
+-- 12 editing text
+vim.o.undodir = os.getenv('HOME') .. '/.local/state/nvim/undodir' -- Location for the undo files
+vim.o.undofile = true         -- When on, Vim autmatically saves undo history
