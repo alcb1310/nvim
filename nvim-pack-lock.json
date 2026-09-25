@@ -5,6 +5,10 @@
       "src": "https://github.com/saghen/blink.cmp",
       "version": "1.0.0 - 2.0.0"
     },
+    "differ.nvim": {
+      "rev": "99c96a04ce8cb948ebcc2b8ad17c116bb0ae8e2a",
+      "src": "https://github.com/undont/differ.nvim"
+    },
     "flash.nvim": {
       "rev": "5f0f270fdc7c5b0c21d903ee85b9cb06f2ac636a",
       "src": "https://github.com/folke/flash.nvim"
