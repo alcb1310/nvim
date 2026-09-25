@@ -108,6 +108,10 @@ go install -v github.com/incu6us/goimports-reviser/v3@latest
 
 ## Debuggers
 
+- **CodeLLDB**
+
+Inside of *NeoVim* open `Mason` and install `codelldb`
+
 - **Go Delve**
 ```bash
 go install github.com/go-delve/delve/cmd/dlv@latest
