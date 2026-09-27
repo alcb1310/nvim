@@ -25,3 +25,7 @@ vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { silent = true })
 vim.keymap.set('n', '<leader>pu', function()
     vim.pack.update()
 end, { desc = 'Update all the packages', silent = true })
+
+vim.keymap.set('n', '<leader>m', function()
+    vim.cmd('make')
+end, { desc = 'Run make', silent = true })
